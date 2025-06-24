@@ -1,0 +1,62 @@
+Step 1: Collect Sample
+
+	- Obtained a sample phishing email impersonating "Kaufland."
+
+Step 2: Sender Spoofing Check (via EML Analyzer)
+
+	- Checked visible name vs actual email (Kaufland Team vs service@stayfriends.de).
+	
+	- Identified domain mismatch (stayfriends.de not related to Kaufland).
+
+	- SPF failed, and DKIM/DMARC were missing.
+
+	- Sender IP (45.143.92.114) had poor reputation (checked via WHOIS/VirusTotal).
+
+Step 3: Header Analysis (via Header Analyzer Tool)
+
+	- Verified mismatch between From and Return-Path fields.
+
+	- SPF result: Fail (unauthorized IP).
+
+	- DKIM/DMARC: Absent.
+
+	- Mail originated from suspicious domain zpaytz.xyz.
+
+	- Spam Confidence Level (SCL): 5 (flagged by Microsoft as suspicious).
+
+Step 4: Malicious Link Identification
+
+	- Found 3+ links pointing to blog.afridox.com, unrelated to Kaufland.
+
+	- Detected hidden 1px tracking pixel.
+
+	- No file attachments were present.
+	
+Step 5: Urgency & Psychological Triggers
+
+	- Email used urgency-inducing language: “You’ve been selected,” “Join now!”
+
+	- Pushes recipient to act quickly on the fake prize.
+
+Step 6: Grammar and Language Checks
+
+	- Multiple grammatical and spelling errors.
+
+	- Inconsistent mix of German and English.
+
+	- Machine-translation artifacts detected.
+
+Step 7: Final Summary of Red Flags
+
+	- Sender spoofing with unrelated domain.
+
+	- Authentication failures (SPF, DKIM, DMARC).
+	
+	- Malicious redirect links and tracking.
+
+	- Suspicious IP and spam score.
+
+	- Urgency tactics and poor grammar.
+
+	- Clear case of phishing with impersonation.
+
